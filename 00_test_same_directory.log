@@ -1,0 +1,89 @@
+[.] Create a small test drive
+256+0 records in
+256+0 records out
+262144 bytes (262 kB, 256 KiB) copied, 0.0017953 s, 146 MB/s
+[.] Create FAT file system and mount
+mkfs.fat 4.1 (2017-01-24)
+[.] Create 10 test files in the root directory
+total 36
+drwxr-x---.  2 root root 16384 Jan  1  1970 .
+drwxrwxrwt. 17 root root   400 Oct 31 13:47 ..
+-rwxr-x---.  1 root root     8 Oct 31 13:47 FRGNTHI10.txt
+-rwxr-x---.  1 root root     8 Oct 31 13:47 FRGNTHI1.txt
+-rwxr-x---.  1 root root     8 Oct 31 13:47 FRGNTHI2.txt
+-rwxr-x---.  1 root root     8 Oct 31 13:47 FRGNTHI3.txt
+-rwxr-x---.  1 root root     8 Oct 31 13:47 FRGNTHI4.txt
+-rwxr-x---.  1 root root     8 Oct 31 13:47 FRGNTHI5.txt
+-rwxr-x---.  1 root root     8 Oct 31 13:47 FRGNTHI6.txt
+-rwxr-x---.  1 root root     8 Oct 31 13:47 FRGNTHI7.txt
+-rwxr-x---.  1 root root     8 Oct 31 13:47 FRGNTHI8.txt
+-rwxr-x---.  1 root root     8 Oct 31 13:47 FRGNTHI9.txt
+[.] delete the 10 test files
+total 16
+drwxr-x---.  2 root root 16384 Jan  1  1970 .
+drwxrwxrwt. 17 root root   400 Oct 31 13:47 ..
+[.] Get overwrite program
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 13009  100 13009    0     0   282k      0 --:--:-- --:--:-- --:--:--  282k
+[.] Compile overwrite program
+[.] run overwrite program
+
+Writing files: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+Writing data: 
+100% 
+Clearing: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 0.001 seconds 
+Done. 
+[.] unmount the test file system
+[.] check the metadata, read the directory block
+00000600  e5 74 00 65 00 6d 00 70  00 31 00 0f 00 f0 32 00  |.t.e.m.p.1....2.|
+00000610  33 00 34 00 35 00 36 00  37 00 00 00 38 00 39 00  |3.4.5.6.7...8.9.|
+00000620  e5 45 4d 50 31 32 7e 31  20 20 20 10 00 5e f6 65  |.EMP12~1   ..^.e|
+00000630  5f 4f 5f 4f 00 00 f6 65  5f 4f 0d 00 00 00 00 00  |_O_O...e_O......|
+00000640  e5 46 00 52 00 47 00 4e  00 54 00 0f 00 f8 48 00  |.F.R.G.N.T....H.|
+00000650  49 00 32 00 2e 00 74 00  78 00 00 00 74 00 00 00  |I.2...t.x...t...|
+00000660  e5 52 47 4e 54 48 49 32  54 58 54 20 00 52 f6 65  |.RGNTHI2TXT .R.e|
+00000670  5f 4f 5f 4f 00 00 f6 65  5f 4f 00 00 00 00 00 00  |_O_O...e_O......|
+00000680  e5 46 00 52 00 47 00 4e  00 54 00 0f 00 99 48 00  |.F.R.G.N.T....H.|
+00000690  49 00 33 00 2e 00 74 00  78 00 00 00 74 00 00 00  |I.3...t.x...t...|
+000006a0  e5 52 47 4e 54 48 49 33  54 58 54 20 00 52 f6 65  |.RGNTHI3TXT .R.e|
+000006b0  5f 4f 5f 4f 00 00 f6 65  5f 4f 00 00 00 00 00 00  |_O_O...e_O......|
+000006c0  e5 46 00 52 00 47 00 4e  00 54 00 0f 00 b9 48 00  |.F.R.G.N.T....H.|
+000006d0  49 00 34 00 2e 00 74 00  78 00 00 00 74 00 00 00  |I.4...t.x...t...|
+000006e0  e5 52 47 4e 54 48 49 34  54 58 54 20 00 52 f6 65  |.RGNTHI4TXT .R.e|
+000006f0  5f 4f 5f 4f 00 00 f6 65  5f 4f 00 00 00 00 00 00  |_O_O...e_O......|
+00000700  e5 46 00 52 00 47 00 4e  00 54 00 0f 00 59 48 00  |.F.R.G.N.T...YH.|
+00000710  49 00 35 00 2e 00 74 00  78 00 00 00 74 00 00 00  |I.5...t.x...t...|
+00000720  e5 52 47 4e 54 48 49 35  54 58 54 20 00 52 f6 65  |.RGNTHI5TXT .R.e|
+00000730  5f 4f 5f 4f 00 00 f6 65  5f 4f 00 00 00 00 00 00  |_O_O...e_O......|
+00000740  e5 46 00 52 00 47 00 4e  00 54 00 0f 00 79 48 00  |.F.R.G.N.T...yH.|
+00000750  49 00 36 00 2e 00 74 00  78 00 00 00 74 00 00 00  |I.6...t.x...t...|
+00000760  e5 52 47 4e 54 48 49 36  54 58 54 20 00 52 f6 65  |.RGNTHI6TXT .R.e|
+00000770  5f 4f 5f 4f 00 00 f6 65  5f 4f 00 00 00 00 00 00  |_O_O...e_O......|
+00000780  e5 46 00 52 00 47 00 4e  00 54 00 0f 00 19 48 00  |.F.R.G.N.T....H.|
+00000790  49 00 37 00 2e 00 74 00  78 00 00 00 74 00 00 00  |I.7...t.x...t...|
+000007a0  e5 52 47 4e 54 48 49 37  54 58 54 20 00 52 f6 65  |.RGNTHI7TXT .R.e|
+000007b0  5f 4f 5f 4f 00 00 f6 65  5f 4f 00 00 00 00 00 00  |_O_O...e_O......|
+000007c0  e5 46 00 52 00 47 00 4e  00 54 00 0f 00 39 48 00  |.F.R.G.N.T...9H.|
+000007d0  49 00 38 00 2e 00 74 00  78 00 00 00 74 00 00 00  |I.8...t.x...t...|
+000007e0  e5 52 47 4e 54 48 49 38  54 58 54 20 00 52 f6 65  |.RGNTHI8TXT .R.e|
+000007f0  5f 4f 5f 4f 00 00 f6 65  5f 4f 00 00 00 00 00 00  |_O_O...e_O......|
+00000800  e5 46 00 52 00 47 00 4e  00 54 00 0f 00 d9 48 00  |.F.R.G.N.T....H.|
+00000810  49 00 39 00 2e 00 74 00  78 00 00 00 74 00 00 00  |I.9...t.x...t...|
+00000820  e5 52 47 4e 54 48 49 39  54 58 54 20 00 52 f6 65  |.RGNTHI9TXT .R.e|
+00000830  5f 4f 5f 4f 00 00 f6 65  5f 4f 00 00 00 00 00 00  |_O_O...e_O......|
+00000840  e5 46 00 52 00 47 00 4e  00 54 00 0f 00 bc 48 00  |.F.R.G.N.T....H.|
+00000850  49 00 31 00 30 00 2e 00  74 00 00 00 78 00 74 00  |I.1.0...t...x.t.|
+00000860  e5 52 47 4e 54 48 7e 31  54 58 54 20 00 52 f6 65  |.RGNTH~1TXT .R.e|
+00000870  5f 4f 5f 4f 00 00 f6 65  5f 4f 00 00 00 00 00 00  |_O_O...e_O......|
+00000880  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
+*
+00000900
+Binary file /tmp/RAWdata matches
+[X] file name rest found on test drive!
+[.] clean up
