@@ -1,0 +1,19 @@
+[.] Get overwrite program
+[.] Head of the source file with version info
+
+/*
+TITLE:			Overwrite
+DESCRIPTION:	Overwrite empty space on disk data and metadata.
+CODE:			github.com/ivoprogram/overwrite
+LICENSE:		GNU General Public License v3.0 http://www.gnu.org/licenses/gpl.html
+AUTHOR:			Ivo Gjorgjievski
+WEBSITE:		ivoprogram.github.io
+VERSION:		1.4.1 2019-11-03
+
+[.] Compile overwrite program
+[.] Hashes for version compare
+de00a5b392fb3d6e44317575bb6d077a  overwrite
+cce51bb7755b64114cab24af18eefa82  overwrite.c
+[.] used test system
+Linux Gate1 5.0.0-31-generic #33~18.04.1-Ubuntu SMP Tue Oct 1 10:20:39 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 18.04.3 LTS"

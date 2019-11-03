@@ -7,6 +7,9 @@ if [[ $EUID != 0 ]]; then
     echo "[!] mount/unmount operations needs root privilege"
     exit
 fi
+if [[ ! -x ./overwrite ]]; then
+    ./load_overwrite.sh
+fi
 
 echo '[.] Create a small test drive'
 dd bs=1k count=256 if=/dev/zero of=$RAW
@@ -25,9 +28,10 @@ echo '[.] delete the 10 test files'
 rm $FS/FRGNTHI*.txt
 ls -al $FS
 
-./load_overwrite.sh
-echo '[.] run overwrite program'
-./overwrite -dirs:10 -path:$FS/
+echo '[.] run overwrite program with -dirs:20 to overwrite 10 entries'
+# Differences between number in -dirs and number of overwrites is
+# in the documentation.
+./overwrite -dirs:20 -path:$FS/
 
 echo '[.] unmount the test file system'
 sync -f $FS

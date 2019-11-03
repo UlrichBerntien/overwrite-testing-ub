@@ -17,7 +17,7 @@ Overwrite is a written in standard C. The source code is published on a [github 
 The files ".sh" are bash shell scripts.
 The files ".log" are output of the script files.
 
-*00_test_same_directory*
+**00_test_same_directory**
 
 Overwrite Version 1.0 2019-10-04 creates the file in a subdirectory.
 So only one directory entry in the given path was overwritten.
@@ -27,15 +27,34 @@ overwrite entries. If entries with long names should be overwritten
 2 or more entries are needed to overwrite one.
 (FAT file system)
 
-*01_test_short_names*
+The documentation of overwrite version 1.4.1 2019-11-03 advices
+to set a higher number in -dirs parameter to overwrite all
+directory entries.
+
+**01_test_short_names**
 
 Overwrite ver1.2-2019-10-28 create files with long names.
 So the directory entry with short name inside the directory
 list was not overwritten.
 (FAT file system)
 
-*02_test_overflow*
+Overwrite Version 1.3.1 2019-10-30 uses short directory names too
+overwrite entries.
 
-Overwrite Version 1.3.1 2019-10-30 uses strcpy and strcat without
+**02_test_overflow**
+
+Overwrite version 1.3.1 2019-10-30 uses strcpy and strcat without
 checking the string length. So a very long path name argument
 causes a buffer overflow.
+
+Overwrite version 1.4.1 2019-11-03 handles also very long path names.
+
+## Support files
+
+**load_overwrite.sh**
+
+Load overwrite source from Github and compile it.
+
+**run_all.sh**
+
+Load, compile overwrite program and run all test cases.
