@@ -1,0 +1,50 @@
+[.] Create a small test drive
+2+0 records in
+2+0 records out
+2097152 bytes (2,1 MB, 2,0 MiB) copied, 0,00103999 s, 2,0 GB/s
+[.] Create ext4 file system and mount
+mke2fs 1.44.1 (24-Mar-2018)
+Discarding device blocks: 1024/2048         done                            
+Creating filesystem with 2048 1k blocks and 256 inodes
+
+Allocating group tables: 0/1   done                            
+Writing inode tables: 0/1   done                            
+Creating journal (1024 blocks): done
+Writing superblocks and filesystem accounting information: 0/1   done
+
+[.] Create test directories
+total 17
+drwxr-xr-x  7 root root  1024 Nov  5 06:37 .
+drwxrwxrwt 16 root root   380 Nov  5 06:37 ..
+drwxr-x---  2 root root  1024 Nov  5 06:37 backslash\
+drwxr-x---  2 root root  1024 Nov  5 06:37 colon:
+drwx------  2 root root 12288 Nov  5 06:37 lost+found
+drwxr-x---  2 root root  1024 Nov  5 06:37 simple
+drwxr-x---  2 root root  1024 Nov  5 06:37 unicode̷
+[.] run overwrite program
+[.] call: ./overwrite -dirs:10 -path:/tmp/testfs/simple
+
+Writing directories: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.0 
+Done. 
+[.] call: ./overwrite -dirs:10 -path:/tmp/testfs/colon:
+
+Error, arguments contain space or ends with :  
+[.] call: ./overwrite -dirs:10 -path:/tmp/testfs/backslash\
+
+Writing directories: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.0 
+Done. 
+[.] call: ./overwrite -dirs:10 -path:/tmp/testfs/unicode̷
+
+Writing directories: 
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+
+Time: 00:00:00.0 
+Done. 
+[.] clean up
+rmdir: failed to remove '/tmp/testfs': Device or resource busy
