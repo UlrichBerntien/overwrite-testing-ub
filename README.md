@@ -49,6 +49,19 @@ causes a buffer overflow.
 
 Overwrite version 1.4.1 2019-11-03 handles also very long path names.
 
+**03_test_unix_names**
+
+Overwrite version 1.4.1 2019-11-03 handles path names with ':' and
+'\' at the end not correct. A workaround is possible: call overwrite
+with '/' at the end of the path name.
+
+**04_ext4_file_names**
+
+Demonstrates that -dirs:5 is not enough to overwrite 10 directory
+entries in the ext4 file system. (The same on the FAT file system,
+more file systems could work like ext4 and FAT.)
+
+
 ## Support files
 
 **load_overwrite.sh**
